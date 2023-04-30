@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-scripts",
+  "version": "1.0.0",
+  "description": "the most script execution with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run index.js",
+    "github": "node github/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lnavarrocarter/node-scripts.git"
+  },
+  "keywords": [
+    "node",
+    "scripts",
+    "automated"
+  ],
+  "author": "Nacho Navarro <lnavarro.carter@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lnavarrocarter/node-scripts/issues"
+  },
+  "homepage": "https://github.com/lnavarrocarter/node-scripts#readme",
+  "dependencies": {
+    "@octokit/rest": "^19.0.7"
+  }
+}
