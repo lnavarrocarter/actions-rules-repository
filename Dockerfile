@@ -17,4 +17,5 @@ RUN npm install
 RUN ls -la
 
 ENV GITHUB_TOKEN=$github_token
-CMD ["node", "libs/github/index.js"]
+
+CMD ["npm","run", "github"]
