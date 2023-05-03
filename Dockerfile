@@ -11,9 +11,7 @@ LABEL repository="https://github.com/lnavarrocarter/node-script-action"
 LABEL homepage="https://github.com/lnavarrocarter/node-script-action"
 LABEL maintainer="Nacho Navarro <lnavarro.carter@gmail.com>"
 
+COPY . ./github
 RUN apt-get update && apt-get install -y git
-
 ENV GITHUB_TOKEN=$github_token
-
-
-CMD ["node", "github/index.js"]
+CMD ["node", "index.js"]
