@@ -1,4 +1,4 @@
-name: Actions rules repository
+name: actions-rules-repository
 description: Add rules repository labels to issues and pull requests.
 author: lnavarrocarter <lnavarro.carter@gmaill.com>
 inputs:
@@ -16,9 +16,9 @@ inputs:
   number:
     description: The number of the issue or pull request.
     required: false
-runs:
-  using: docker
-  main: Dockerfile
 branding:
   icon: bookmark
   color: green
+runs:
+  using: docker
+  image: Dockerfile
