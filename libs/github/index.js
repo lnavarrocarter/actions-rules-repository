@@ -9,10 +9,13 @@ const octokit = new Octokit({
 }); 
 
 const main = async () => {
-    //const user = await getUserInfomation();
-    const [owner, repo] = githubRepo.split('/');
-    console.info('This is a Repo & owner $1 $2', owner, repo);
-    console.log('This is a user $1', user);
+    try{
+        const [owner, repo] = githubRepo.split('/');
+        const branches = await listBranches(owner, repo);
+        console.log(branches);
+    } catch (err) { 
+        console.error({err});
+    }
 }
 
 const getUserInfomation = async () => {
