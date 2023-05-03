@@ -7,6 +7,11 @@
     "test": "npm run main.js",
     "github": "node libs/github/index.js"
   },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@octokit/rest": "^19.0.7",
+    "@octokit/webhooks": "^7.6.2"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/lnavarrocarter/node-scripts.git"
@@ -22,9 +27,5 @@
   "bugs": {
     "url": "https://github.com/lnavarrocarter/node-scripts/issues"
   },
-  "homepage": "https://github.com/lnavarrocarter/node-scripts#readme",
-  "dependencies": {
-    "@octokit/rest": "^19.0.7",
-    "@octokit/webhooks": "^7.6.2"
-  }
+  "homepage": "https://github.com/lnavarrocarter/node-scripts#readme"
 }
