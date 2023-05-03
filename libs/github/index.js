@@ -3,16 +3,16 @@ const envs = require('dotenv').config();
 
 
 const githubToken = process.env.GITHUB_TOKEN;
+const githubRepo =  process.env.GITHUB_REPOSITORY
 const octokit = new Octokit({
     auth: githubToken,
 }); 
 
 const main = async () => {
-    const [owner, repo] = core.getInput('repo').split('/');
-    /*const branchconfig = await restringebranch(owner, repo)
-    .catch(err => console.log({err}));
-    console.log(branchconfig);*/
-    console.log('This is a Repo & owner $1 $2', owner, repo);
+    const user = await getUserInfomation();
+    const [owner, repo] = githubRepo.split('/');
+    console.info('This is a Repo & owner $1 $2', owner, repo);
+    console.log('This is a user $1', user);
 }
 
 const getUserInfomation = async () => {
