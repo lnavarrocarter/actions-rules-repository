@@ -9,7 +9,7 @@ const octokit = new Octokit({
 }); 
 
 const main = async () => {
-    const user = await getUserInfomation();
+    //const user = await getUserInfomation();
     const [owner, repo] = githubRepo.split('/');
     console.info('This is a Repo & owner $1 $2', owner, repo);
     console.log('This is a user $1', user);
