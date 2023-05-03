@@ -1,49 +1,32 @@
-# nodejs-scripts
+# Rules Engine Repository Actions
 
-Este repositorio contiene scripts para ejecutar tareas automatizadas utilizando Node.js. 
+## Usage
 
+```yml
+name: Testing Actions Rules Repository
+on: 
+    push:
+        branches:
+        - main
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-## Requerimientos
-
-Antes de ejecutar los scripts asegúrate de tener instalado Node.js en tu sistema.
-
-
-## Instalación
-
-Puedes clonar este repositorio en tu máquina local utilizando el siguiente comando:
-
-```bach
-git clone git@github.com:lnavarrocarter/node-scripts.git
+      - name : Testing Actions Rules Repository
+        uses: lnavarrocarter/actions-rules-repository@v1.0.0
+        with:
+          labels: |
+            label1
+            label2
+            label3
+          repo: ${{ github.repository }}
+          number: 4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Después de clonar el repositorio, ejecuta el siguiente comando para instalar las dependencias necesarias:
-
-
-```bach
-npm install
-```
-
-## Scripts
-
-Este repositorio incluye los siguientes scripts:
-
-```bach
-test
-```
-
-Ejecuta el archivo index.js
-
-```bach
-npm run test
-```
-
-## github
-
-Cierra los issues antiguos de un repositorio de GitHub utilizando la API de GitHub.
-
-```bach
-npm run github
-```
 
 ## Contacto
 

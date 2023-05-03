@@ -1,0 +1,20 @@
+name: Testing Actions Rules Repository
+on: 
+  workflow_dispatch:
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name : Testing Actions Rules Repository
+        uses: lnavarrocarter/actions-rules-repository@v1
+        with:
+          labels: |
+            label1
+            label2
+            label3
+          repo: lnavarrocarter/actions-rules-repository
+          number: 1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
