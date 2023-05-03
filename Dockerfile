@@ -13,7 +13,7 @@ LABEL maintainer="Nacho Navarro <lnavarro.carter@gmail.com>"
 
 RUN apt-get update && apt-get install -y git
 
-ENV GITHUB_TOKEN=$GITHUB_TOKEN
+ENV GITHUB_TOKEN=$github_token
 
 
 CMD ["node", "github/index.js"]
