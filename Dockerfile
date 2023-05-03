@@ -12,11 +12,9 @@ LABEL homepage="https://github.com/lnavarrocarter/node-script-action"
 LABEL maintainer="Nacho Navarro <lnavarro.carter@gmail.com>"
 
 COPY . .
-RUN apt-get update && apt-get install -y git
-
 RUN npm install
 
 RUN ls -la
 
 ENV GITHUB_TOKEN=$github_token
-CMD ["node", "github/index.js"]
+CMD ["node", "libs/github/index.js"]
