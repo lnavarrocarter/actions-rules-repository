@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name : Testing Actions Rules Repository - Assigment Labels
-        uses: lnavarrocarter/actions-rules-repository@v1.0
+      - name: actions-rules-repository
+        uses: lnavarrocarter/actions-rules-repository@1.0
         with:
           labels: |
             label1
