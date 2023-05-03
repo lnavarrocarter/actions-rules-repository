@@ -1,7 +1,8 @@
 const { Octokit } = require("@octokit/rest");
-const { core } = require('@actions/core');
+const envs = require('dotenv').config();
 
-const githubToken = core.getInput('github_token');
+
+const githubToken = process.env.GITHUB_TOKEN;
 const octokit = new Octokit({
     auth: githubToken,
 }); 

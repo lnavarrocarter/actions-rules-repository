@@ -17,5 +17,8 @@ RUN npm install
 RUN ls -la
 
 ENV GITHUB_TOKEN=$github_token
+ENV GITHUB_REPOSITORY=$github_repository
+ENV NUMBER=$number
+ENV LABELS=$labels
 
 CMD ["npm","run", "github"]
