@@ -15,6 +15,6 @@ jobs:
             label1
             label2
             label3
-          repo: lnavarrocarter/actions-rules-repository
-          number: 1
+          repo: ${{ github.repository }}
+          number: 3
           github_token: ${{ secrets.GITHUB_TOKEN }}
