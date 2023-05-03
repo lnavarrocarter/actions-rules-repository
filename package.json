@@ -1,11 +1,11 @@
 {
-  "name": "nodejs-scripts",
+  "name": "nodejs-script-actions",
   "version": "1.0.0",
-  "description": "the most script execution with nodejs",
+  "description": "the most script execution with nodejs and github actions",
   "main": "index.js",
   "scripts": {
-    "test": "npm run index.js",
-    "github": "node github/index.js"
+    "test": "npm run main.js",
+    "github": "node libs/github/index.js"
   },
   "repository": {
     "type": "git",
@@ -14,7 +14,8 @@
   "keywords": [
     "node",
     "scripts",
-    "automated"
+    "automated",
+    "actions"
   ],
   "author": "Nacho Navarro <lnavarro.carter@gmail.com>",
   "license": "MIT",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/lnavarrocarter/node-scripts#readme",
   "dependencies": {
-    "@octokit/rest": "^19.0.7"
+    "@octokit/rest": "^19.0.7",
+    "@octokit/webhooks": "^7.6.2"
   }
 }

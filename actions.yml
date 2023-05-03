@@ -1,0 +1,24 @@
+name: Actions rules repository
+description: Add rules repository labels to issues and pull requests.
+author: lnavarrocarter <lnavarro.carter@gmaill.com>
+inputs:
+  github_token:
+    description: A GitHub token.
+    required: false
+    default: ${{ github.token }}
+  labels:
+    description: The labels' name to be added. Must be separated with line breaks if there're multiple labels.
+    required: true
+  repo:
+    description: The owner and repository name. e.g.) lnavarrocarter/actions-rules-repository
+    required: false
+    default: ${{ github.repository }}
+  number:
+    description: The number of the issue or pull request.
+    required: false
+runs:
+  using: docker
+  main: Dockerfile
+branding:
+  icon: bookmark
+  color: green
